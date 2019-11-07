@@ -1,0 +1,32 @@
+### 2.2 ### Building a queue for a restaurant where chefs take off the order from the top of the
+list and servers add at the end of the list. Would I use and array or a list?
+
+- I would choose a list because the perform better doing inserts/deletion. Also, by knowing
+what's at index 0 and -1 you know which is the first item and last item on the list, therefore
+allowing the runtime for deletion and insert to be O(1), making it efficient. Having random access
+is not needed within this use case, and having to worry about re-allocating the elements in the
+array can slow down the process.
+
+### 2.3 ### Facebook needs to implement a list of usernames where a user can log in
+if their name exists in the list. Would I implement the list as a linked list or an array ?
+
+- When having to do a search it will involve a lot of reads, and by utilizing binary search
+I can speed up my process. Using a linked list would take too much time as I would have to
+read through each and every element in order to get to the middle element if I needed to
+and I need to have random access if I were to implement a binary search. Therefore, I would use
+a sorted array as it has a much fast reading with a O(log n) and I wouldn't have to sort the linked.
+
+### 2.4 ### Facebook has a lot of sign-ups, therefore making a lot of inserts. What are the downsides
+of an array for inserts? If I were to use binary search to search for logins, what happens when
+you add a new user to an array ?
+
+- The downsides of using an array for insertion is that you would have to keep shifting all your elements down
+after a new insert and have to re-sort them every time. You would also risk not having enough memory and then slowing down your algorithm.
+
+
+### 2.5 ### Will utilizing a hybrid of an array composed of linked-list be slower or faster than each for searching
+and inserting ?
+
+
+- I believe it will be more efficient to utilize the hybrid because you would be leveraging the reading run time
+of an array to locate where the username would be stored and the ability to have quick inserts/deletion.
